@@ -23,7 +23,7 @@ wsl: vim tmux bash
 linux: wsl
 
 
-clean:
+remove:
 	-rm ${HOME}/.vimrc
 	-rm ${HOME}/.tmux.conf
 	-rm ${HOME}/.zshrc
