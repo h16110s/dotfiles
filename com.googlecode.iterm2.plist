@@ -6,6 +6,8 @@
 	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>FCCAB1E7-6EF9-4A42-B85C-FB20C7516129</string>
+	<key>DockIconTogglesWindow</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -128,6 +130,8 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1179924</integer>
+	<key>HotkeyWindowFloatsAboveOtherWindows</key>
+	<true/>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>New Bookmarks</key>
@@ -298,6 +302,8 @@
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
+			<key>Background Image Mode</key>
+			<integer>0</integer>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -406,6 +412,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Use Transparency</key>
+			<true/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1071,7 +1079,7 @@
 			<key>HotKey Window Dock Click Action</key>
 			<integer>0</integer>
 			<key>HotKey Window Floats</key>
-			<false/>
+			<true/>
 			<key>HotKey Window Reopens On Activation</key>
 			<false/>
 			<key>Idle Code</key>
