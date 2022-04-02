@@ -48,6 +48,7 @@ ${promot_mark} "
 alias ll='ls -al'
 alias g='git'
 alias gf='git fetch'
+alias lg='lazygit'
 
 # キーバインド
 # cmd + delete
@@ -56,8 +57,4 @@ bindkey "^X\\x7f" backward-kill-line
 # パス
 export PATH=$PATH:/usr/local/bin
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
-export MANPATH=/opt/local/man:$MANPATH
-export PATH=$PATH:/opt/homebrew/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu11.43.1021-ca-jdk11.0.9.1-macosx_aarch64
-export PATH=$PATH:/Users/$USER/Library/Android/sdk/platform-tools
-export PATH="/opt/homebrew/bin:$PATH"
+export PATH=/opt/homebrew/bin$PATH:
