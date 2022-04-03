@@ -57,4 +57,4 @@ bindkey "^X\\x7f" backward-kill-line
 # パス
 export PATH=$PATH:/usr/local/bin
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
-export PATH=/opt/homebrew/bin$PATH:
+export PATH=/opt/homebrew/bin:$PATH
