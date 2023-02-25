@@ -17,11 +17,18 @@ setopt hist_ignore_dups
 local prompt_location="%B%F{027}%n@%F{045}%m%b%f:%~%b%f"
 local promot_mark="%(!,#,❯)%b"
 
-# vcs_infoロード
-autoload -Uz vcs_info
 # PROMPT変数内で変数参照する
 setopt prompt_subst
 
+# コマンドラインの引数で --prefix=/usr などの = 以降でも補完できる
+setopt magic_equal_subst
+
+# ビープ音を消す
+setopt no_beep
+
+
+# vcs_infoロード
+autoload -Uz vcs_info
 # vcsの表示
 zstyle ':vcs_info:*' formats '%s][* %F{green}%b%f'
 zstyle ':vcs_info:*' actionformats '%s][* %F{green}%b%f(%F{red}%a%f)'
@@ -58,3 +65,4 @@ bindkey "^X\\x7f" backward-kill-line
 export PATH=$PATH:/usr/local/bin
 export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
