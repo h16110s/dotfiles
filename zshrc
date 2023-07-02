@@ -51,18 +51,25 @@ PROMPT="
 ${prompt_location}"'$vcs_info_msg_0_'"
 ${promot_mark} "
 
-# エイリアス
-alias ll='ls -al'
-alias g='git'
-alias gf='git fetch'
-alias lg='lazygit'
-
 # キーバインド
 # cmd + delete
 bindkey "^X\\x7f" backward-kill-line 
 
 # パス
 export PATH=$PATH:/usr/local/bin
-export PATH=/opt/local/bin:/opt/local/sbin/:$PATH
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin/
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/opt/homebrew/sbin
+
+
+ZSH_DIR="${HOME}/.zsh"
+
+# .zshがディレクトリで、読み取り、実行、が可能なとき
+if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
+    # zshディレクトリより下にある、.zshファイルの分、繰り返す
+    for file in ${ZSH_DIR}/**/*.zsh; do
+        # 読み取り可能ならば実行する
+        [ -r $file ] && source $file
+    done
+fi
+
