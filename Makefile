@@ -16,6 +16,11 @@ zsh:
 bash: 
 	ln -s ${PWD}/bashrc ${HOME}/.bashrc
 
+
+.PHONY: vscode
+vscode:
+	ln -s ${PWD}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
+
 remove:
 	-rm ${HOME}/.vimrc
 	-rm ${HOME}/.tmux.conf
