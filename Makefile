@@ -21,6 +21,12 @@ bash:
 vscode:
 	ln -s ${PWD}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
 
+
+.PHONY: homebrew
+homebrew:
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
 remove:
 	-rm ${HOME}/.vimrc
 	-rm ${HOME}/.tmux.conf
