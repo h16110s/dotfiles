@@ -27,6 +27,11 @@ homebrew:
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
+.PHONY: rosetta2
+rosetta2:
+	softwareupdate --install-rosetta --agree-to-license
+
+
 remove:
 	-rm ${HOME}/.vimrc
 	-rm ${HOME}/.tmux.conf
