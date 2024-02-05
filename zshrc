@@ -54,6 +54,10 @@ ${promot_mark} "
 # キーバインド
 # cmd + delete
 bindkey "^X\\x7f" backward-kill-line 
+bindkey "^A" beginning-of-line
+bindkey "^B" backward-char
+bindkey "^E" end-of-line
+bindkey "^F" forward-char
 
 # パス
 export PATH=$PATH:/usr/local/bin
